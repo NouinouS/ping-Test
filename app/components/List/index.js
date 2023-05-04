@@ -11,15 +11,15 @@ function List(props) {
   // If we have items, render them
   if (props.items) {
     content = props.items.map(item => (
-      <ComponentToRender key={`item-${item.id}`} item={item} />
+      <ComponentToRender className={props.className} key={`item-${item.id}`} item={item} />
     ));
   } else {
     // Otherwise render a single component
-    content = <ComponentToRender />;
+    content = <ComponentToRender className={props.className} />;
   }
 
   return (
-    <Wrapper>
+    <Wrapper className={props.className}>
       <Ul>{content}</Ul>
     </Wrapper>
   );
@@ -28,6 +28,7 @@ function List(props) {
 List.propTypes = {
   component: PropTypes.elementType.isRequired,
   items: PropTypes.array,
+  className: PropTypes.string
 };
 
 export default List;
