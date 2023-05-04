@@ -16,6 +16,7 @@
  */
 
 import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
+import { LOAD_ADDRS } from './constants';
 
 /**
  * Load the repositories, this action starts the request saga
@@ -55,5 +56,12 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error,
+  };
+}
+
+export function loadAddrs(addressList) {
+  return {
+    type: LOAD_ADDRS,
+    value : addressList
   };
 }

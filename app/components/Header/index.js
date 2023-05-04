@@ -21,6 +21,9 @@ function Header() {
         <HeaderLink to="/features">
           <FormattedMessage {...messages.features} />
         </HeaderLink>
+        <HeaderLink to="/ping">
+          <FormattedMessage {...messages.ping} />
+        </HeaderLink>
       </NavBar>
     </div>
   );

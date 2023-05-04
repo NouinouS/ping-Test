@@ -1,7 +1,7 @@
 import produce from 'immer';
 
 import appReducer from '../reducer';
-import { loadRepos, reposLoaded, repoLoadingError } from '../actions';
+import { loadRepos, reposLoaded, repoLoadingError, loadAddrs } from '../actions';
 
 /* eslint-disable default-case, no-param-reassign */
 describe('appReducer', () => {
@@ -14,6 +14,7 @@ describe('appReducer', () => {
       userData: {
         repositories: false,
       },
+      recentAddrs: false,
     };
   });
 
@@ -62,5 +63,14 @@ describe('appReducer', () => {
     expect(appReducer(state, repoLoadingError(fixture))).toEqual(
       expectedResult,
     );
+  });
+
+  it('should handle the loadAddrs action correctly', () => {
+    const fixture = ['192.168.1.1','0.0.0.0'];
+    const expectedResult = produce(state, draft => {
+      draft.recentAddrs = fixture;
+    });
+
+    expect(appReducer(state, loadAddrs(fixture))).toEqual(expectedResult);
   });
 });

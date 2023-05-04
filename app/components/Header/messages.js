@@ -16,4 +16,8 @@ export default defineMessages({
     id: `${scope}.features`,
     defaultMessage: 'Features',
   },
+  ping: {
+    id: `${scope}.ping`,
+    defaultMessage: 'Ping'
+  }
 });

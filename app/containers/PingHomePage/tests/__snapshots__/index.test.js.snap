@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PingHomePage /> should render and match the snapshot 1`] = `
+<div>
+  <span>
+    This is the PingHomePage container!
+  </span>
+  <div
+    class="Wrapper-sc-1umgotm-0 laCwDT"
+  >
+    <ul
+      class="Ul-mwnq6h-0 jcxXFy"
+    >
+      <div>
+        <button>
+          Add
+        </button>
+        192.168.1.1
+      </div>
+      <div>
+        <button>
+          Add
+        </button>
+        1.1.1.1
+      </div>
+    </ul>
+  </div>
+</div>
+`;
