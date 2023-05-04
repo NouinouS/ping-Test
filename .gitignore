@@ -8,3 +8,8 @@ stats.json
 .DS_Store
 npm-debug.log
 .idea
+
+#VS folders
+.history/
+.vscode/
+jest.bat
